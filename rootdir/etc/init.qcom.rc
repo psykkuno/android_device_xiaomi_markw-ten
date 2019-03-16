@@ -451,3 +451,8 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     group system
     disabled
     oneshot
+
+# Enable PowerHAL hint processing
+
+on property:dev.bootcomplete=1
+    setprop vendor.powerhal.init 1
