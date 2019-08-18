@@ -2,6 +2,4 @@ allow system_app sysfs_vibrator:file { write open getattr };
 allow system_app sysfs_vibrator:dir search;
 allow system_app sysfs_torch:file rw_file_perms;
 allow system_app sysfs_torch:dir search;
-#============= Navbar ============= 
-allow system_app proc_touchpanel:dir search;
-allow system_app proc_touchpanel:file write;
+allow system_app sysfs_leds:dir search;
