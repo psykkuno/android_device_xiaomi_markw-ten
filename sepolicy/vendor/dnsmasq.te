@@ -1,0 +1,4 @@
+allow dnsmasq vendor_file:file getattr;
+allow dnsmasq gx_fpd_exec:file getattr;
+allow dnsmasq self:capability sys_admin;
+allow dnsmasq mm-qcamerad_exec:file getattr;

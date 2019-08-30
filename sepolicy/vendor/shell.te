@@ -1,0 +1,3 @@
+allow shell vendor_file:file getattr;
+allow shell gx_fpd_exec:file getattr;
+allow shell mm-qcamerad_exec:file getattr;
