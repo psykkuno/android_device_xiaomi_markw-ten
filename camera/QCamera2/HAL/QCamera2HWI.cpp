@@ -1679,7 +1679,7 @@ QCamera2HardwareInterface::QCamera2HardwareInterface(uint32_t cameraId)
     mCameraDevice.common.close = close_camera_device;
     mCameraDevice.ops = &mCameraOps;
     mCameraDevice.priv = this;
- 
+
 #ifndef USE_DISPLAY_SERVICE
     mCameraDisplay = new QCameraDisplay();
 #else
@@ -3074,7 +3074,9 @@ QCameraHeapMemory *QCamera2HardwareInterface::allocateStreamInfoBuf(
                     streamInfo->user_buf_info.frame_buf_cnt,
                     streamInfo->user_buf_info.frameInterval);
         }
+        [[fallthrough]];
     case CAM_STREAM_TYPE_PREVIEW:
+        break;
         if (mParameters.getRecordingHintValue()) {
             if(mParameters.isDISEnabled()) {
                 streamInfo->is_type = mParameters.getISType();
@@ -5957,7 +5959,9 @@ void QCamera2HardwareInterface::camEvtHandle(uint32_t /*camera_handle*/,
                         obj->mDefCond.broadcast();
                         LOGH("broadcast mDefCond signal\n");
                     }
+                    [[fallthrough]];
                 default:
+                    break;
                     obj->processEvt(QCAMERA_SM_EVT_EVT_NOTIFY, payload);
                     break;
             }
