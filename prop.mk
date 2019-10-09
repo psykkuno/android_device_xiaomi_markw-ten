@@ -181,4 +181,4 @@ ro.havoc.maintainer=ShihabZzz
 
 # FWK
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.va_aosp.support=1
+ro.vendor.qti.va_aosp.support=1
