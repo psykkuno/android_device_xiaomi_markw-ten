@@ -44,10 +44,6 @@ bluetooth.hfp.client=1 \
 vendor.qcom.bluetooth.soc=smd \
 ro.bluetooth.hfp.ver=1.7
 
-# Boot
-PRODUCT_PROPERTY_OVERRIDES += \
-sys.vendor.shutdown.waittime=500
-
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
 camera.display.lmax=1280x720 \
@@ -110,12 +106,6 @@ vendor.hw.fm.init=0
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
-# Higher fling velocities
-# for smoother scrolling and better responsiveness
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.min.fling_velocity=160 \
-ro.max.fling_velocity=20000
-
 # IMS debug
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.ims.disableADBLogs=1 \
@@ -142,8 +132,7 @@ vendor.video.disable.ubwc=1
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.vendor.extension_library=libqti-perfd-client.so \
-ro.vendor.qti.sys.fw.bservice_enable=true
+ro.vendor.extension_library=libqti-perfd-client.so
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -151,50 +140,23 @@ ro.vendor.use_data_netmgrd=true \
 persist.data.netmgrd.qos.enable=true \
 persist.vendor.data.mode=concurrent
 
-# Nitz
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.radio.nitz_plmn="" \
-persist.vendor.radio.nitz_lons_0="" \
-persist.vendor.radio.nitz_lons_1="" \
-persist.vendor.radio.nitz_lons_2="" \
-persist.vendor.radio.nitz_lons_3="" \
-persist.vendor.radio.nitz_sons_0="" \
-persist.vendor.radio.nitz_sons_1="" \
-persist.vendor.radio.nitz_sons_2="" \
-persist.vendor.radio.nitz_sons_3=""
-
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-DEVICE_PROVISIONED=1 \
 persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1 \
 persist.vendor.radio.apm_sim_not_pwdn=1 \
 persist.radio.multisim.config=dsds \
 persist.vendor.radio.custom_ecc=1 \
-persist.vendor.radio.hw_mbn_update=0 \
 persist.vendor.radio.rat_on=combine \
 persist.vendor.radio.sib16_support=1 \
 persist.vendor.radio.aosp_usr_pref_sel=true \
-ril.subscription.types=NV,RUIM \
-rild.libargs=-d/dev/smd0 \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-ro.telephony.call_ring.multiple=false \
 ro.telephony.default_network=22,20 \
-service.qti.ims.enabled=1
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.delta_time.enable=true
-
-# Tcp
-PRODUCT_PROPERTY_OVERRIDES += \
-net.tcp.2g_init_rwnd=10
-
-# Touch optimize
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.qti.inputopts.enable=true \
-persist.vendor.qti.inputopts.movetouchslop=0.6
 
 # UI
 PRODUCT_PROPERTY_OVERRIDES += \
