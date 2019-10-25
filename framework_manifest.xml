@@ -32,6 +32,5 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IAtCmdFwd</name>
             <instance>AtCmdFwdService</instance>
         </interface>
-        <fqname>@1.0::IAtCmdFwd/AtCmdFwdService</fqname>
     </hal>
 </manifest>
