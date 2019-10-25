@@ -39,9 +39,6 @@ VNDK_SP_LIBRARIES := \
     libutilscallstack \
     libz
 
-EXTRA_VENDOR_LIBRARIES := \
-    android.hidl.base@1.0
-
 #-------------------------------------------------------------------------------
 # VNDK Modules
 #-------------------------------------------------------------------------------
@@ -83,9 +80,6 @@ $(foreach lib,$(VNDK_SP_LIBRARIES),\
     $(eval $(call define-vndk-lib,$(lib),vndk-sp-gen,vndk-sp-29,)))
 $(foreach lib,$(VNDK_SP_EXT_LIBRARIES),\
     $(eval $(call define-vndk-lib,$(lib),vndk-sp-ext-gen,vndk-sp,true)))
-$(foreach lib,$(EXTRA_VENDOR_LIBRARIES),\
-    $(eval $(call define-vndk-lib,$(lib),vndk-ext-gen,,true)))
-
 
 #-------------------------------------------------------------------------------
 # Phony Package
@@ -96,7 +90,6 @@ LOCAL_MODULE := vndk-sp
 LOCAL_MODULE_TAGS := optional
 LOCAL_REQUIRED_MODULES := \
     $(addsuffix .vndk-sp-gen,$(VNDK_SP_LIBRARIES)) \
-    $(addsuffix .vndk-sp-ext-gen,$(VNDK_SP_EXT_LIBRARIES)) \
-    $(addsuffix .vndk-ext-gen,$(EXTRA_VENDOR_LIBRARIES))
+    $(addsuffix .vndk-sp-ext-gen,$(VNDK_SP_EXT_LIBRARIES))
 include $(BUILD_PHONY_PACKAGE)
 endif
