@@ -1797,10 +1797,6 @@ case "$target" in
                 echo 85 > /proc/sys/kernel/sched_upmigrate
                 echo 85 > /proc/sys/kernel/sched_downmigrate
 
-                #HQ D1s-706 add for touch boost start
-                echo 0:1401600 1:1401600 2:1401600 3:1401600 4:1401600 5:1401600 6:1401600 7:1401600 > /sys/module/cpu_boost/parameters/input_boost_freq
-                #HQ D1s-706 add for touch boost end
-
                 # Set Memory parameters
                 configure_memory_parameters
             ;;
