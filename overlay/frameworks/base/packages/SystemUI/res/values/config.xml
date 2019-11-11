@@ -28,8 +28,7 @@
     <integer name="config_maxVisibleNotificationIcons">10</integer>
     <integer name="config_maxVisibleNotificationIconsWhenDark">10</integer>
 
-    <!-- System icon area layout weight -->
-    <item name="system_icon_area_weight" format="float" type="integer">1.25</item>
-
+    <!-- Whether SystemUI ignores notch -->
+    <bool name="hide_view_behind_notch">true</bool>
     
 </resources>
