@@ -178,3 +178,7 @@ persist.sys.wfd.virtual=0
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.havoc.maintainer=ShihabZzz
+
+# FWK
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.va_aosp.support=1
