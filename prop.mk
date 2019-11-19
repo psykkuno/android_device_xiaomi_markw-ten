@@ -113,6 +113,10 @@ vendor.hw.fm.init=0
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
+# FWK
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+ro.vendor.qti.va_aosp.support=1
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 av.debug.disable.pers.cache=1 \
@@ -152,7 +156,7 @@ persist.vendor.radio.rat_on=combine \
 persist.vendor.radio.sib16_support=1 \
 persist.vendor.radio.aosp_usr_pref_sel=true \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-ro.telephony.default_network=22,20 \
+ro.telephony.default_network=22,20
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -161,6 +165,10 @@ persist.vendor.delta_time.enable=true
 # UI
 PRODUCT_PROPERTY_OVERRIDES += \
 sys.use_fifo_ui=1
+
+# UBWC
+PRODUCT_PROPERTY_OVERRIDES += \
+vendor.video.disable.ubwc=1
 
 # Virtual Display
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -178,7 +186,3 @@ persist.sys.wfd.virtual=0
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.havoc.maintainer=ShihabZzz
-
-# FWK
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-ro.vendor.qti.va_aosp.support=1
