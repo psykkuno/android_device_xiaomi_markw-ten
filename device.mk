@@ -98,7 +98,6 @@ PRODUCT_PACKAGES += \
     audio_amplifier.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
-    libaacwrapper \
     libqcompostprocbundle \
     libaudio-resampler \
     libqcomvisualizer \
@@ -427,6 +426,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny \
     $(LOCAL_PATH)/wifi/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf
 
-# Wi-Fi Display
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libaacwrapper \
+    libnl
+
 PRODUCT_BOOT_JARS += \
     WfdCommon
