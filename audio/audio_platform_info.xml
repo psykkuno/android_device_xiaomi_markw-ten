@@ -54,6 +54,7 @@
     </config_params>
     <acdb_ids>
         <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="14"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_DMIC_EF_FLUENCE " acdb_id="41"/>
         <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="1"/>
         <device name="SND_DEVICE_IN_HANDSET_STEREO_DMIC" acdb_id="1"/>
         <device name="SND_DEVICE_OUT_SPEAKER_WSA" acdb_id="14"/>
