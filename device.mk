@@ -107,7 +107,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
-    android.hardware.bluetooth.audio@2.0-impl
+    android.hardware.bluetooth.audio@2.0-impl \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    libbluetooth_qti
 
 # Audio mixer
 PRODUCT_COPY_FILES += \
