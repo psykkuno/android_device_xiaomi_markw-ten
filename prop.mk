@@ -144,6 +144,10 @@ ro.vendor.use_data_netmgrd=true \
 persist.data.netmgrd.qos.enable=true \
 persist.vendor.data.mode=concurrent
 
+#prefer HW codec over SW for thumbnail
+PRODUCT_PROPERTY_OVERRIDES += \
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.dbg.volte_avail_ovr=1 \
