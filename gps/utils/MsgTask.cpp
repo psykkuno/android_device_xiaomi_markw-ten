@@ -74,14 +74,16 @@ void MsgTask::destroy() {
 }
 
 void MsgTask::sendMsg(const LocMsg* msg) const {
-    msg_q_snd((void*)mQ, (void*)msg, LocMsgDestroy);
+    if (msg) {
+        msg_q_snd((void*)mQ, (void*)msg, LocMsgDestroy);
+    } else {
+        LOC_LOGE("%s: msg is NULL", __func__);
+    }
 }
 
 void MsgTask::prerun() {
-#ifndef FEATURE_EXTERNAL_AP
     // make sure we do not run in background scheduling group
      set_sched_policy(gettid(), SP_FOREGROUND);
-#endif /* FEATURE_EXTERNAL_AP */
 }
 
 bool MsgTask::run() {
