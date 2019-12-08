@@ -873,7 +873,5 @@ DEFAULT_IMPL()
 void LocApiBase::addToCallQueue(LocApiResponse* /*adapterResponse*/)
 DEFAULT_IMPL()
 
-void LocApiBase::updateSystemPowerState(PowerStateType /*powerState*/)
-DEFAULT_IMPL()
 
 } // namespace loc_core

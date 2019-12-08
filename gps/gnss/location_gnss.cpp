@@ -79,7 +79,6 @@ static void odcpiInject(const Location& location);
 static void blockCPI(double latitude, double longitude, float accuracy,
                      int blockDurationMsec, double latLonDiffThreshold);
 static void updateBatteryStatus(bool charging);
-static void updateSystemPowerState(PowerStateType systemPowerState);
 
 static const GnssInterface gGnssInterface = {
     sizeof(GnssInterface),
@@ -118,8 +117,7 @@ static const GnssInterface gGnssInterface = {
     nfwInit,
     getPowerStateChanges,
     injectLocationExt,
-    updateBatteryStatus,
-    updateSystemPowerState
+    updateBatteryStatus
 };
 
 #ifndef DEBUG_X86
@@ -391,10 +389,4 @@ static void updateBatteryStatus(bool charging) {
     if (NULL != gGnssAdapter) {
         gGnssAdapter->getSystemStatus()->updatePowerConnectState(charging);
     }
-}
-
-static void updateSystemPowerState(PowerStateType systemPowerState) {
-   if (NULL != gGnssAdapter) {
-       gGnssAdapter->updateSystemPowerStateCommand(systemPowerState);
-   }
 }

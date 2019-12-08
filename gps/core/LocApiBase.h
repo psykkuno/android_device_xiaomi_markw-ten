@@ -312,7 +312,6 @@ public:
     void updateEvtMask();
     void updateNmeaMask(uint32_t mask);
 
-    virtual void updateSystemPowerState(PowerStateType systemPowerState);
 };
 
 typedef LocApiBase* (getLocApi_t)(LOC_API_ADAPTER_EVENT_MASK_T exMask,
