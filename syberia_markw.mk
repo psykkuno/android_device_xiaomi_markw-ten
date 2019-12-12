@@ -19,15 +19,15 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common HavocOS stuff
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+# Inherit some common syberia stuff
+$(call inherit-product, vendor/syberia/common.mk)
 
 # Inherit from markw device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := Xiaomi
-PRODUCT_NAME := havoc_markw
+PRODUCT_NAME := syberia_markw
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_DEVICE := markw
@@ -38,9 +38,10 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="markw-user 6.0.1 MMB29M V10.2.2.0.MBEMIXM release-keys" \
     TARGET_DEVICE="markw"
+    DEVICE_MAINTAINERS="IndieRock00"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := Xiaomi/markw/markw:6.0.1/MMB29M/V10.2.2.0.MBEMIXM:user/release-keys
 
 # Havoc
-export export HAVOC_BUILD_TYPE=Official
+#export export HAVOC_BUILD_TYPE=Official
