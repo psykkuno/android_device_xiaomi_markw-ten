@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_markw.mk
+    $(LOCAL_DIR)/syberia_markw.mk
 
 COMMON_LUNCH_CHOICES := \
-    havoc_markw-user \
-    havoc_markw-userdebug \
-    havoc_markw-eng
+    syberia_markw-user \
+    syberia_markw-userdebug \
+    syberia_markw-eng
