@@ -39,6 +39,8 @@ BUILD_BROKEN_PHONY_TARGETS := true
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
+TARGET_GAPPS_ARCH := arm/arm64
+
 # Kernel
 #TARGET_KERNEL_CONFIG := franco_markw_defconfig
 TARGET_KERNEL_CONFIG := markw_defconfig
