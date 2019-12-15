@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/syberia_markw.mk
+    $(LOCAL_DIR)/aosp_markw.mk
 
 COMMON_LUNCH_CHOICES := \
-    syberia_markw-user \
-    syberia_markw-userdebug \
-    syberia_markw-eng
+    aosp_markw-user \
+    aosp_markw-userdebug \
+    aosp_markw-eng
