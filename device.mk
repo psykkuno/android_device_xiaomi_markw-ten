@@ -203,6 +203,9 @@ PRODUCT_PACKAGES += \
 # fwk-detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect
+    
+# Gapps
+TARGET_GAPPS_ARCH := arm64
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
