@@ -3,9 +3,9 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_C_INCLUDES += \
-	$(TOP)/hardware/qcom-caf/msm8996/audio/hal/msm8916/ \
-	$(TOP)/hardware/qcom-caf/msm8996/audio/hal/ \
-	$(TOP)/hardware/qcom-caf/msm8996/audio/hal/audio_extn \
+	$(TOP)/hardware/qcom/audio-caf/msm8996/hal/msm8916/ \
+	$(TOP)/hardware/qcom/audio-caf/msm8996/hal/ \
+	$(TOP)/hardware/qcom/audio-caf/msm8996/hal/audio_extn \
 	external/tinyalsa/include \
 	external/tinycompress/include \
 	system/media/audio_route/include
